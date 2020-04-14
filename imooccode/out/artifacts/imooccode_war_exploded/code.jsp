@@ -14,7 +14,7 @@
     response.setHeader("cache-control","no-cache");
     response.setHeader("expires","0");
 
-    String code = CaptcahCode.drawImageVerificate(response);
+    String code = CaptcahCode.drawImage(response);
     session.setAttribute("code",code);
 
     //如何解决outputstream异常问题
