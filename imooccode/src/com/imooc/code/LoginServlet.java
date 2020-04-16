@@ -30,6 +30,7 @@ public class LoginServlet extends HttpServlet {
         System.out.println("sessionCode:"+sessionCode);
         if(code!=null && sessionCode!=null){
             if(code.equalsIgnoreCase(sessionCode)){
+                System.out.println("login success");
                 out.print("success");
             }
             else{

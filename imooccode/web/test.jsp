@@ -41,11 +41,11 @@
         //给登录按钮绑定点击事件
         $("#login").on("click",function(){
             //获取用户输入的验证码
-            alert("成功点击");
             var code = $("#code").val();
-            //alert(code);
+            // alert(code);
             var params = {"code":code};
-            $.post("http://localhost/imooccode_war_exploded/login",params,function(data){
+            $.post("http://localhost:8000/imooccode_war_exploded/login",params,function(data){
+                alert(data);
                if(data=="fail"){
                     alert("验证码输入有误!");
                }
