@@ -21,6 +21,15 @@
         <servlet-name>importExcelInit</servlet-name>
         <url-pattern>/importExcelInit</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>exportExcelInit</servlet-name>
+        <servlet-class>org.imooc.servlet.ExportExcelInitServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>exportExcelInit</servlet-name>
+        <url-pattern>/exportExcelInit</url-pattern>
+    </servlet-mapping>
     
     <servlet>
         <servlet-name>importExcel</servlet-name>
@@ -31,6 +40,15 @@
         <url-pattern>/importExcel</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+        <servlet-name>exportExcel</servlet-name>
+        <servlet-class>org.imooc.servlet.ExportExcelServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>exportExcel</servlet-name>
+        <url-pattern>/exportExcel</url-pattern>
+    </servlet-mapping>
     <jsp-config>
         <jsp-property-group>
             <url-pattern>*.jsp</url-pattern>
