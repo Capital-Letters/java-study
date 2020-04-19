@@ -49,6 +49,51 @@
         <servlet-name>exportExcel</servlet-name>
         <url-pattern>/exportExcel</url-pattern>
     </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>importWordInit</servlet-name>
+        <servlet-class>org.imooc.servlet.ImportWordInitServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>importWordInit</servlet-name>
+        <url-pattern>/importWordInit</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>importWord</servlet-name>
+        <servlet-class>org.imooc.servlet.ImportWordServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>importWord</servlet-name>
+        <url-pattern>/importWord</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>exportWordInit</servlet-name>
+        <servlet-class>org.imooc.servlet.ExportWordInitServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>exportWordInit</servlet-name>
+        <url-pattern>/exportWordInit</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>exportWord</servlet-name>
+        <servlet-class>org.imooc.servlet.ExportWordServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>exportWord</servlet-name>
+        <url-pattern>/exportWord</url-pattern>
+    </servlet-mapping>
+    
+    
+    
     <jsp-config>
         <jsp-property-group>
             <url-pattern>*.jsp</url-pattern>

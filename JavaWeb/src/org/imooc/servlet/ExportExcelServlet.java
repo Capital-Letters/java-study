@@ -8,6 +8,8 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class ExportExcelServlet extends HttpServlet {
@@ -22,9 +24,17 @@ public class ExportExcelServlet extends HttpServlet {
         Workbook workbook = service.export(true);
         response.setHeader("Content-Disposition","attachment;filename=export.xlsx");
         ServletOutputStream outputStream = response.getOutputStream();
-        workbook.write(outputStream);
+        FileOutputStream fileOutputStream = new FileOutputStream("d:/upload/export.xlsx");
+
+        workbook.write(fileOutputStream);
+
+        FileInputStream fileInputStream = new FileInputStream("d:/upload/export.xlsx");
+        byte[] bytes = new byte[fileInputStream.available()];
+        fileInputStream.read(bytes);
+        outputStream.write(bytes);
         outputStream.flush();
         outputStream.close();
+        workbook.close();
 
     }
 }
