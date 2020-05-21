@@ -17,7 +17,7 @@ public final class ConnectionUtil {
 
     private static String user = "root";
 
-    private static String password = "";
+    private static String password = "root";
 
     private ConnectionUtil() {}
 
